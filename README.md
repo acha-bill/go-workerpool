@@ -47,7 +47,7 @@ resI := <-responses
 log.Println(resI.(int))
 ```
 ## Benchmark
-100 tasks were submited to the worker pool and their time to finish was calculated.
+1000 tasks were submited to the worker pool and their time to finish was calculated.
 
 The task:
 ```go
@@ -62,4 +62,4 @@ Results:
 |----------------|---------| ------------- |--------|
 | 1              | 1000    | 3993085 ns/op | -  
 | 10             | 1000    | 2128894 ns/op | 46.69%
-| 100            | 1000    | 1975701 ns/op | 7.2%
+| 100            | 1000    | 1975701 ns/op | 7.2%(10), 50.52% (1)
