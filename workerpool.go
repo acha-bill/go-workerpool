@@ -224,7 +224,7 @@ func (w *WorkerPool) nextID() uint64 {
 // It returns an error if the task submit is not a function.
 // It also returns a channel where the response of the task will be sent on.
 // The first value of the response is always an error. Followed by the returned values from the task.
-func (w *WorkerPool) TrySubmit(f any, arguments ...any) (error, chan any) {
+func (w *WorkerPool) TrySubmit(f any, arguments ...any) (error, <-chan any) {
 	if !w.Running() {
 		return ErrWorkerPoolNotRunning, nil
 	}
